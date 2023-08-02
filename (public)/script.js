@@ -5,17 +5,16 @@ function sendMessage() {
   const messageInput = document.getElementById('message-input');
   const message = messageInput.value.trim();
   if (message !== '') {
-    // Salve a mensagem no Realtime Database
     const messagesRef = firebase.database().ref('messages');
     messagesRef.push({
       text: message,
-      timestamp: firebase.database.ServerValue.TIMESTAMP // Adiciona o timestamp da mensagem
+      timestamp: firebase.database.ServerValue.TIMESTAMP
     });
 
-    // Limpa o campo de input após enviar a mensagem
     messageInput.value = '';
   }
 }
+
 
 // Event listener para o botão de envio de mensagens
 document.getElementById('send-button').addEventListener('click', sendMessage);
