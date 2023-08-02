@@ -62,7 +62,6 @@
     // Função para exibir as mensagens no chat
     function displayMessages(messages) {
       const chatMessages = document.querySelector('.chat-messages');
-      chatMessages.innerHTML = ''; // Limpa o conteúdo anterior para evitar duplicação
 
       messages.forEach((message) => {
         const messageElement = document.createElement('div');
