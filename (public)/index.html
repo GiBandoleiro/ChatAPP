@@ -15,7 +15,7 @@
   <div class="container">
     <div class="chat-window">
       <div class="chat-area">
-        <div class="chat-messages">
+        <div class="chat-messages" id="chat-messages">
           <!-- Chat Messages -->
         </div>
       </div>
@@ -26,12 +26,24 @@
     </div>
   </div>
 
+  <!-- Adicione os scripts do Firebase aqui -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
   <script>
     // Inicialize o Firebase com a configuração do seu projeto
     const firebaseConfig = {
-      // Insira sua configuração do Firebase aqui
+      apiKey: "AIzaSyApkKOMsz6I4gy5O6Y5VAnHt538qN9sJ3s",
+      authDomain: "chatappaovivo.firebaseapp.com",
+      projectId: "chatappaovivo",
+      storageBucket: "chatappaovivo.appspot.com",
+      messagingSenderId: "1050433533269",
+      appId: "1:1050433533269:web:8079aaa95138fef059ebdc",
+      measurementId: "G-RMCB2CS3RN"
     };
+
     firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
 
     // Função para enviar uma mensagem ao pressionar Enter ou clicar no botão "Send"
     function sendMessage() {
@@ -90,6 +102,7 @@
     listenForMessages();
   </script>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
