@@ -1,6 +1,4 @@
-import { app } from './firebase';
-// Inicialize o Firebase (certifique-se de já ter configurado o Firebase no seu projeto)
-firebase.initializeApp(app);
+firebase.initializeApp(firebaseConfig);
 
 // Event listener para o botão de envio de mensagens
 document.getElementById('send-button').addEventListener('click', sendMessage);
