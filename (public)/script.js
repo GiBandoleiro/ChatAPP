@@ -54,8 +54,5 @@ function listenForMessages() {
   });
 }
 
-// Atualiza a interface a cada segundo
-setInterval(listenForMessages, 1000);
-
 // Chama a função listenForMessages imediatamente para exibir as mensagens atuais
 listenForMessages();
